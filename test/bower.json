@@ -1,0 +1,31 @@
+{
+  "name": "FrenchApp",
+  "version": "0.0.1",
+  "authors": [
+    "Quentin Dejean <quentin.dejean34@gmail.com>"
+  ],
+  "description": "A super French app. Voila.",
+  "main": "./ngFrench.js",
+  "keywords": [
+    "french",
+    "stuff"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "source",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "test.iml",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "my-test-package-name": "*",
+    "angular": "1.3.0"
+  }
+}

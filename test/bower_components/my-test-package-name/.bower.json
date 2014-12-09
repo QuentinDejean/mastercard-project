@@ -1,0 +1,13 @@
+{
+  "name": "my-test-package-name",
+  "homepage": "https://github.com/QuentinDejean/test-repo",
+  "_release": "e0ab64b09e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "e0ab64b09eca1013653c53a04b334749bb74299b"
+  },
+  "_source": "git://github.com/QuentinDejean/test-repo.git",
+  "_target": "*",
+  "_originalSource": "my-test-package-name"
+}
