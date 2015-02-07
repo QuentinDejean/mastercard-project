@@ -1,0 +1,26 @@
+<ion-view view-title="Summary">
+    <ion-nav-buttons side="right">
+        <button
+                class="button button-balanced ion-checkmark-round"
+                ng-click="proceed()">
+            <!--ng-if="isValid"-->
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="mt-30 text-center page-meal-summary">
+        <div class="list" ng-repeat="summary in mealSummary">
+
+            <div class="item item-divider">
+                {{ ::summary.title }}
+            </div>
+
+            <a class="item item-icon-right  item-{{ ::summary.color }}"
+               ng-repeat="ingdt in summary.ingredients track by $index">
+                <i class="icon ion-close-round"
+                   ng-click="removeIngdt(summary, $index)"></i>
+                {{ ingdt }}
+            </a>
+
+        </div>
+    </ion-content>
+</ion-view>

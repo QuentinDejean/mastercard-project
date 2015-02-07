@@ -1,0 +1,71 @@
+<ion-view view-title="Setup">
+    <ion-nav-buttons side="right">
+        <button
+                class="button button-balanced ion-checkmark-round"
+                ng-click="proceed()">
+                <!--ng-if="isValid"-->
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="page-setup">
+        <form
+                role="form"
+                name="setupForm"
+                novalidate="novalidate">
+            <div class="list list-inset">
+
+                <label class="item item-input">
+                    <span class="input-label">Number of people</span>
+                    <input type="number"
+                           ng-model="data.people" required>
+                </label>
+                <label class="item item-input item-select">
+                    <div class="input-label">
+                        Dietary Requirements
+                    </div>
+                    <select ng-model="data.option"
+                            ng-options="opt as opt.label for opt in options" required>
+                    </select>
+                </label>
+
+                <label class="item item-input">
+                    <div class="input-label">
+                        Postcode
+                    </div>
+                    <input type="text"
+                           ng-model="data.postcode"
+                           ng-blur="isFormValid(setupForm.$valid)"
+                           required>
+                </label>
+
+                <label class="item item-input">
+                    <div class="input-label">
+                        Budget
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-right">
+                            <ul class="inline">
+                                <li>$</li>
+                                <li>$$</li>
+                                <li>$$$</li>
+                            </ul>
+                        </div>
+                    </div>
+                </label>
+
+                <label class="item item-input">
+                    <div class="input-label">
+                        Payment Details
+                    </div>
+
+                    <div class="row">
+                        <div class="col text-right">
+                            <img src="../../../images/setup/mastercard.png" height="30" />
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

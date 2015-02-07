@@ -1,0 +1,30 @@
+<ion-view view-title="Coles North Sydney">
+    <ion-nav-buttons side="right">
+        <button
+                class="button button-balanced ion-checkmark-round"
+                ng-click="proceed()">
+            <!--ng-if="isValid"-->
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="mt-30 text-center page-meal-scan">
+        <div class="list" ng-repeat="scan in mealScan">
+
+            <div class="item item-divider">
+                {{ ::scan.title }}
+            </div>
+
+            <a class="item item-icon-right  item-{{ ::scan.color }}"
+               ng-repeat="ingdt in scan.ingredients track by $index">
+                <i class="icon ion-checkmark-round"></i>
+                {{ ingdt }}
+            </a>
+
+        </div>
+    </ion-content>
+
+
+    <ion-footer-bar class="bar-stable">
+        <h1 class="title">Barcode Scanner</h1>
+    </ion-footer-bar>
+</ion-view>

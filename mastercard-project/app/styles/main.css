@@ -1,0 +1,98 @@
+/******************************/
+/********** GENERIC ***********/
+/******************************/
+
+.bar .button {
+    border-radius: 0;
+    font-size: 24px;
+}
+
+ul.inline li {
+    display: inline;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/******************************/
+/******** SETUP PAGE **********/
+/******************************/
+
+
+.page-setup .item {
+    border-left: none;
+    border-right: none;
+}
+
+.page-setup .item:first-child {
+    border-top: none;
+}
+
+.page-setup ul,
+.page-setup img {
+    margin-right: 86px;
+}
+
+.page-setup ul li {
+    color: #dddddd;
+    font-weight: bold;
+    padding: 5px 15px;
+}
+
+.page-setup ul li:hover {
+    color: #636463;
+    cursor: pointer;
+}
+
+.page-setup ul li:not(:first-child) {
+    border-left: 2px solid #ddd;
+}
+
+
+/***************************************/
+/******** MEAL SELECTION PAGE **********/
+/***************************************/
+
+.page-meal-selection strong {
+    font-size: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.page-meal-selection .small {
+    margin-bottom: 30px;
+}
+
+
+.page-meal-selection .button {
+    min-width: 24px;
+    min-height: 20px;
+    line-height: 15px;
+    padding: 3px;
+    border-radius: 13px;
+}
+
+
+/*************************************/
+/******** MEAL SUMMARY PAGE **********/
+/*************************************/
+
+.page-meal-summary .list {
+    margin-bottom: 20px;
+}
+
+.page-meal-summary .icon {
+    cursor: pointer;
+}
+
+
