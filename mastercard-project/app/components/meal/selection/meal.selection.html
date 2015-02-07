@@ -7,15 +7,19 @@
         </button>
     </ion-nav-buttons>
 
-    <ion-content class="mt-30 text-center page-meal-selection">
+    <ion-content class=" text-center page-meal-selection">
+
+        <div class="header-image text-center">
+            <img src="images/meal/selection/header-selection.png" height="80"/>
+        </div>
 
         <div ng-repeat="selection in mealSelection">
             <p>
                 <button ng-click = "decreaseSelection(selection)"
-                        class="button button-positive ion-minus-round"></button>
+                        class="button button-light ion-minus-round"></button>
                 <strong>{{ selection.number }} meals</strong>
                 <button ng-click = "increaseSelection(selection)"
-                        class="button button-positive ion-plus-round"></button>
+                        class="button button-light ion-plus-round"></button>
             </p>
             <p class="small">{{ ::selection.value }}</p>
         </div>

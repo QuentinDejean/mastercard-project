@@ -1,6 +1,63 @@
+@font-face {
+    font-family: 'Grotesque';
+    font-weight: 400;
+    src: url('/fonts/Brandon_med.otf');
+}
+
+@font-face {
+    font-family: 'Grotesque Bold';
+    font-weight: 600;
+    src: url('/fonts/Brandon_med.otf');
+}
+
+
+
 /******************************/
 /********** GENERIC ***********/
 /******************************/
+
+body, input, button, select, textarea,
+h1, h2, h3, h4, h5 {
+    font-family: 'Grotesque', Helvetica Neue, Helvetica, Arial;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+p {
+    font-size: 17px;
+}
+
+.bar.bar-stable {
+    border-color: transparent;
+}
+
+.bar.bar-stable,
+.bar-subheader {
+    background-color: #d1d2d4;
+}
+
+.header-image {
+    background-color: #d1d2d4;
+    min-height: 140px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.header-image h2 {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.button.button-balanced,
+.button.button-balanced.activated {
+    border: 1px solid #cde2a7;
+    background-color: #cde2a7;
+}
 
 .bar .button {
     border-radius: 0;
@@ -9,10 +66,6 @@
 
 ul.inline li {
     display: inline;
-}
-
-.mt-30 {
-    margin-top: 30px;
 }
 
 .text-right {
@@ -34,19 +87,32 @@ ul.inline li {
     border-right: none;
 }
 
+.page-setup .item:before {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+
+    border-top: 20px solid #f00;
+
+}
+
 .page-setup .item:first-child {
     border-top: none;
 }
 
-.page-setup ul,
-.page-setup img {
-    margin-right: 86px;
+.page-setup ul {
+    font-size: 17px;
 }
 
 .page-setup ul li {
     color: #dddddd;
     font-weight: bold;
     padding: 5px 15px;
+}
+
+.page-setup ul li:last-child {
+    padding-right: 0;
 }
 
 .page-setup ul li:hover {
@@ -64,9 +130,9 @@ ul.inline li {
 /***************************************/
 
 .page-meal-selection strong {
+    display: inline-block;
     font-size: 32px;
-    padding-left: 10px;
-    padding-right: 10px;
+    width: 130px;
 }
 
 .page-meal-selection .small {
@@ -88,11 +154,52 @@ ul.inline li {
 /*************************************/
 
 .page-meal-summary .list {
-    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.page-meal-summary .item {
+    color: #000000;
+}
+
+.page-meal-summary .item .icon {
+    color: #6D6E71;
+}
+
+.page-meal-summary .item strong {
+    padding-right: 40px;
+}
+
+.page-meal-summary .item-stable,
+.page-meal-summary .item-stable.activated {
+    background-color: #d1d2d4;
+    border-color: #d1d2d4;
+}
+
+.page-meal-summary .item-balanced,
+.page-meal-summary .item-balanced.activated {
+    background-color: #cde3a4;
+    border-color: #cde3a4;
+}
+
+.page-meal-summary .item-calm,
+.page-meal-summary .item-calm.activated {
+    background-color: #a6dcdf;
+    border-color: #a6dcdf;
+}
+
+.page-meal-summary .item-energized,
+.page-meal-summary .item-energized.activated {
+    background-color: #dbbaa2;
+    border-color: #dbbaa2;
 }
 
 .page-meal-summary .icon {
     cursor: pointer;
+}
+
+
+.page-checkout-summary h1 {
+    font-size: 45px;
 }
 
 

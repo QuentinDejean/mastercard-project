@@ -7,17 +7,18 @@
         </button>
     </ion-nav-buttons>
 
-    <ion-content class="mt-30 text-center page-meal-scan">
-        <div class="list" ng-repeat="scan in mealScan">
+    <ion-content class="page-meal-summary">
+        <div class="list" ng-repeat="scan in ::mealScan">
 
             <div class="item item-divider">
                 {{ ::scan.title }}
             </div>
 
-            <a class="item item-icon-right  item-{{ ::scan.color }}"
-               ng-repeat="ingdt in scan.ingredients track by $index">
-                <i class="icon ion-checkmark-round"></i>
-                {{ ingdt }}
+            <a class="item item-icon-right  item-{{ ::product.color }}"
+               ng-repeat="product in ::scan.products track by $index">
+                <strong>{{ ::product.price }}</strong>
+                {{ ::product.description }}
+                <i class="icon ion-{{ ::product.icon }}"></i>
             </a>
 
         </div>

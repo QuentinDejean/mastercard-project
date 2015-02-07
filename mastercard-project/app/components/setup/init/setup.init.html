@@ -1,4 +1,4 @@
-<ion-view view-title="Setup">
+<ion-view side="left" view-title="Settings">
     <ion-nav-buttons side="right">
         <button
                 class="button button-balanced ion-checkmark-round"
@@ -8,6 +8,12 @@
     </ion-nav-buttons>
 
     <ion-content class="page-setup">
+        <div class="header-image text-center">
+            <img src="images/setup/header-settings.png" height="80"/>
+
+            <h2>Setup</h2>
+        </div>
+
         <form
                 role="form"
                 name="setupForm"
@@ -38,32 +44,28 @@
                            required>
                 </label>
 
-                <label class="item item-input">
+                <label class="item item-input item-icon-right">
                     <div class="input-label">
                         Budget
                     </div>
 
-                    <div class="row">
-                        <div class="col text-right">
-                            <ul class="inline">
-                                <li>$</li>
-                                <li>$$</li>
-                                <li>$$$</li>
-                            </ul>
-                        </div>
-                    </div>
+                    <i class="icon">
+                      <ul class="inline">
+                          <li ng-repeat="sbl in symbols"
+                              ng-click = "setNewBudget(sbl)"
+                              ng-class="{ active: sbl.isActive }">{{ ::sbl.value }}</li>
+                      </ul>
+                    </i>
                 </label>
 
-                <label class="item item-input">
+                <label class="item item-input item-icon-right" ng-click = "setNewBudget(symbol)">
                     <div class="input-label">
                         Payment Details
                     </div>
 
-                    <div class="row">
-                        <div class="col text-right">
-                            <img src="../../../images/setup/mastercard.png" height="30" />
-                        </div>
-                    </div>
+                    <i class="icon">
+                        <img src="../../../images/setup/mastercard.png" height="30" />
+                    </i>
                 </label>
             </div>
         </form>

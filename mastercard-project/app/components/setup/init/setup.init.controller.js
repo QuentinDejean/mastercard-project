@@ -13,16 +13,29 @@ angular.module('mastercard')
             {label: 'None', value: 4}
         ];
 
+
         $scope.data.option = $scope.options[3];
 
-        $scope.number = 3;
+        $scope.symbols = [
+            {value: '$', isActive: false},
+            {value: '$$', isActive: false},
+            {value: '$$$', isActive: false}
+        ];
 
-        $scope.getNumber = function (num) {
-            return new Array(num);
-        };
 
         $scope.proceed = function () {
             $state.go('app.setup-complete');
+        };
+
+
+
+        $scope.setNewBudget = function (symbol) {
+            //$scope.symbol.forEach( function (key) {
+            //    $scope.symbol[key].isActive = false;
+            //});
+
+            //symbol.isActve = true;
+
         };
 
         $scope.isFormValid = function (isValid) {

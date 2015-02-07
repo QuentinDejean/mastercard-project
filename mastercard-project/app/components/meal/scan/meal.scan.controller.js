@@ -4,61 +4,48 @@ angular.module('mastercard')
 .controller('MealScanCtrl', ['$state', '$scope', '$cordovaBarcodeScanner', '$ionicPlatform', '$cordovaCamera',
         function ($state, $scope, $cordovaBarcodeScanner, $ionicPlatform, $cordovaCamera) {
 
+        $scope.proceed = function () {
+            $state.go('app.checkout-summary');
+        };
+
         $scope.mealScan = [{
-            title: 'Breakfast',
-            color: 'balanced',
-            ingredients: ['Eggs and Bacon', 'Toast', 'Pancakes']
+            title: 'Aisle 1',
+            products: [{
+                color: 'stable',
+                price: '$2.80',
+                description: '12 dozen eggs',
+                icon: 'close-round'
+            },{
+                color: 'balanced',
+                price: '$1.95',
+                description: 'Thickened cream',
+                icon: 'checkmark-round'
+            },{
+                color: 'balanced',
+                price: '$1.50',
+                description: '1 litre milk',
+                icon: 'checkmark-round'
+            }]
         },{
-            title: 'Lunch',
-            color: 'calm',
-            ingredients: ['Salad', 'Sandwich', 'Burger']
-        },{
-            title: 'Dinner',
-            color: 'energized',
-            ingredients: ['Pizza', 'Paella', 'Dumplings']
+            title: 'Aisle 2',
+            products: [{
+                color: 'stable',
+                price: '$2.10',
+                description: 'Canned corn kernals',
+                icon: 'camera'
+            },{
+                color: 'stable',
+                price: '$3.80',
+                description: 'Coconut milk',
+                icon: 'camera'
+            },{
+                color: 'energized',
+                price: '$1.50',
+                description: '1 litre milk',
+                icon: 'loop'
+            }]
         }];
 
-        console.log($cordovaBarcodeScanner);
-
-        $ionicPlatform.ready(function() {
-
-            //$cordovaBarcodeScanner
-            //    .scan()
-            //    .then(function(barcodeData) {
-            //        // Success! Barcode data is here
-            //    }, function(error) {
-            //        // An error occurred
-            //    });
-            //
-            //
-            //// NOTE: encoding not functioning yet
-            //$cordovaBarcodeScanner
-            //    .encode(BarcodeScanner.Encode.TEXT_TYPE, "http://www.nytimes.com")
-            //    .then(function(success) {
-            //        // Success!
-            //    }, function(error) {
-            //        // An error occurred
-            //    });
-
-            var options = {
-                quality: 50,
-                destinationType: Camera.DestinationType.DATA_URL,
-                sourceType: Camera.PictureSourceType.CAMERA,
-                allowEdit: true,
-                encodingType: Camera.EncodingType.JPEG,
-                targetWidth: 100,
-                targetHeight: 100,
-                popoverOptions: CameraPopoverOptions,
-                saveToPhotoAlbum: false
-            };
-
-            $cordovaCamera.getPicture(options).then(function(imageData) {
-                var image = document.getElementById('myImage');
-                image.src = "data:image/jpeg;base64," + imageData;
-            }, function(err) {
-                // error
-            });
-        });
 
 
 }]);
