@@ -1,15 +1,18 @@
 <ion-view view-title="Meal Selection">
-    <ion-nav-buttons side="right">
-        <button
-                class="button button-balanced ion-checkmark-round"
-                ng-click="proceed()">
-            <!--ng-if="isValid"-->
-        </button>
-    </ion-nav-buttons>
+    <ion-header-bar align-title="left" class="bar-calm">
+        <button class="button button-icon icon ion-chevron-left"></button>
+        <h1 class="title">Meal Selection</h1>
+        <div class="buttons">
+            <button
+                    class="button button-balanced ion-checkmark-round"
+                    ng-click="proceed()">
+            </button>
+        </div>
+    </ion-header-bar>
 
     <ion-content class=" text-center page-meal-selection">
 
-        <div class="header-image text-center">
+        <div class="header-image bar-calm text-center">
             <img src="images/meal/selection/header-selection.png" height="80"/>
         </div>
 

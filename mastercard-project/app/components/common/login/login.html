@@ -1,3 +1,18 @@
-<ion-item nav-clear menu-close ng-click="login()">
-    Login
-</ion-item>
+<ion-view view-title="Login">
+    <ion-nav-buttons side="right">
+        <button
+                class="button button-balanced ion-checkmark-round"
+                ng-click="proceed()">
+            <!--ng-if="isValid"-->
+        </button>
+    </ion-nav-buttons>
+
+    <ion-content class="page-login">
+        <h1>Login!</h1>
+    </ion-content>
+
+
+    <ion-footer-bar class="bar-stable">
+        <h1 class="title">Barcode Scanner</h1>
+    </ion-footer-bar>
+</ion-view>

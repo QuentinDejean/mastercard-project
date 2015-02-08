@@ -1,14 +1,17 @@
 <ion-view view-title="Checkout Summary">
-    <ion-nav-buttons side="right">
-        <button
-                class="button button-balanced ion-checkmark-round"
-                ng-click="proceed()">
-            <!--ng-if="isValid"-->
-        </button>
-    </ion-nav-buttons>
+    <ion-header-bar align-title="left" class="bar-energized">
+        <button class="button button-icon icon ion-chevron-left"></button>
+        <h1 class="title">Check out</h1>
+        <div class="buttons">
+            <button
+                    class="button button-balanced ion-checkmark-round"
+                    ng-click="proceed()">
+            </button>
+        </div>
+    </ion-header-bar>
 
     <ion-content class=" text-center page-checkout-summary">
-        <div class="header-image text-center">
+        <div class="header-image bar-energized text-center">
             <img src="images/checkout/header-complete.png" height="80"/>
 
             <h2>Express <br/> checkout</h2>

@@ -1,11 +1,17 @@
 <ion-view view-title="Coles North Sydney">
-    <ion-nav-buttons side="right">
-        <button
-                class="button button-balanced ion-checkmark-round"
-                ng-click="proceed()">
-            <!--ng-if="isValid"-->
-        </button>
-    </ion-nav-buttons>
+    <ion-header-bar align-title="left" class="bar-calm header-meal-scan">
+        <button class="button button-icon icon ion-chevron-left"></button>
+        <!--<div class="buttons">-->
+        <!--<button class="button" ng-click="doSomething()">Left Button</button>-->
+        <!--</div>-->
+        <h1 class="title">Settings</h1>
+        <div class="buttons">
+            <button
+                    class="button button-balanced ion-checkmark-round"
+                    ng-click="proceed()">
+            </button>
+        </div>
+    </ion-header-bar>
 
     <ion-content class="page-meal-summary">
         <div class="list" ng-repeat="scan in ::mealScan">

@@ -22,7 +22,8 @@ angular.module('mastercard')
             url: Mapping.page.checkout.complete,
             views: {
                 'menuContent': {
-                    templateUrl: 'components/checkout/complete/checkout.complete.html'
+                    templateUrl: 'components/checkout/complete/checkout.complete.html',
+                    controller: 'CheckoutCompleteCtrl'
                 }
             }
         });

@@ -23,7 +23,8 @@ angular.module('mastercard', ['ionic', 'ngCordova'])
 
     .constant('Mapping', {
         page: {
-            home: '/app'
+            home: '/app',
+            login: '/login'
         },
         service: {},
         event: {
@@ -31,11 +32,8 @@ angular.module('mastercard', ['ionic', 'ngCordova'])
         }
     })
 
-    .constant('ENV', {name:'development',apiEndpoint:'http://dev.yoursite.com:10000/'})
-
     .config(function ($stateProvider, $urlRouterProvider, Mapping) {
         $stateProvider
-
             .state('app', {
                 url: Mapping.page.home,
                 abstract: true,
@@ -43,8 +41,6 @@ angular.module('mastercard', ['ionic', 'ngCordova'])
                 controller: 'MenuCtrl'
             });
 
-
-
-        // if none of the above states are matched, use this as the fallback
+        //if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise(Mapping.page.home);
     });

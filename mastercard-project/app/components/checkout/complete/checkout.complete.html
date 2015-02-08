@@ -1,10 +1,22 @@
-<ion-view view-title="Checkout Summary">
+<ion-view view-title="Checkout Summary" class="page-checkout-complete">
 
-    <ion-content class=" text-center page-checkout-complete">
+    <ion-header-bar align-title="left" class="bar-energized">
+        <button class="button button-icon icon ion-chevron-left"></button>
+        <!--<div class="buttons">-->
+        <!--<button class="button" ng-click="doSomething()">Left Button</button>-->
+        <!--</div>-->
+        <h1 class="title">Check out</h1>
+    </ion-header-bar>
+
+    <ion-content class="text-center">
         <div class="header-image text-center">
             <img src="images/checkout/header-complete.png" height="80"/>
 
             <h2>Thank <br/> you</h2>
         </div>
     </ion-content>
+
+    <ion-footer-bar align-title="left" class="bar-light">
+        <h1 class="title" ng-click="proceed()"><strong>Start Cooking</strong></h1>
+    </ion-footer-bar>
 </ion-view>

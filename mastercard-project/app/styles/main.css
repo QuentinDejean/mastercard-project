@@ -31,39 +31,6 @@ p {
     font-size: 17px;
 }
 
-.bar.bar-stable {
-    border-color: transparent;
-}
-
-.bar.bar-stable,
-.bar-subheader {
-    background-color: #d1d2d4;
-}
-
-.header-image {
-    background-color: #d1d2d4;
-    min-height: 140px;
-    margin-bottom: 30px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-
-.header-image h2 {
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.button.button-balanced,
-.button.button-balanced.activated {
-    border: 1px solid #cde2a7;
-    background-color: #cde2a7;
-}
-
-.bar .button {
-    border-radius: 0;
-    font-size: 24px;
-}
-
 ul.inline li {
     display: inline;
 }
@@ -78,8 +45,110 @@ ul.inline li {
 
 
 /******************************/
+/******** LOGIN PAGE **********/
+/******************************/
+
+.bar.bar-stable {
+    border-color: transparent;
+}
+
+.bar .button.ion-chevron-left,
+.bar .button.ion-navicon {
+    margin-top: -4px;
+}
+
+.bar.bar-stable,
+.bar-subheader {
+    background-color: #d1d2d4;
+}
+
+.bar .title {
+    font-size: 22px;
+}
+
+
+.bar .button-balanced,
+.bar .button-balanced.activated {
+    border: 1px solid #C5C56B;
+    background-color: #C5C56B;
+}
+
+.bar .title + .button:last-child,
+.bar > .button + .button:last-child,
+.bar > .button.pull-right,
+.bar .buttons.pull-right,
+.bar .title + .buttons {
+    right: 0;
+    top: 0;
+}
+
+.header-image {
+    min-height: 140px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.header-image h2 {
+    font-size: 39px;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.bar .button {
+    border-radius: 0;
+    font-size: 28px;
+    height: 45px;
+    right: 0;
+    top: 0;
+    width: 50px;
+}
+
+.page-checkout-complete .bar.bar-light.bar-footer {
+    background-color: white;
+    cursor: pointer;
+    height: 60px;
+}
+
+.page-checkout-complete .bar.bar-light.bar-footer strong {
+    font-size: 28px;
+}
+
+.page-checkout-complete .has-footer {
+    bottom: 70px;
+}
+
+
+/******************************/
 /******** SETUP PAGE **********/
 /******************************/
+
+.page-main,
+.bar-assertive,
+.bar.bar-assertive {
+    background-color: #e47766;
+    background-image: none;
+}
+
+.bar-calm,
+.bar.bar-calm{
+    background-color: #74c7e3;
+    background-image: none;
+}
+
+.bar.bar-light {
+    background-color: transparent;
+    background-image: none;
+}
+
+.bar-energized,
+.bar.bar-energized,
+.page-checkout-complete {
+    background-color: #f6c15b;
+    background-image: none;
+}
+
+
 
 
 .page-setup .item {
@@ -153,6 +222,10 @@ ul.inline li {
 /******** MEAL SUMMARY PAGE **********/
 /*************************************/
 
+.page-meal-summary {
+    margin-top: 50px;
+}
+
 .page-meal-summary .list {
     margin-top: 20px;
 }
@@ -198,8 +271,44 @@ ul.inline li {
 }
 
 
+.header-meal-scan {
+    height: 115px;
+}
+
+
 .page-checkout-summary h1 {
     font-size: 45px;
 }
 
+
+.page-main {
+    padding-top: 50px;
+}
+
+.page-main .bar-footer,
+.page-main .bar-footer .row,
+.page-main .bar-footer .col {
+    padding: 0;
+}
+
+
+.page-main .bar-footer {
+    height: 185px;
+}
+
+.page-main .bar-footer .col {
+    padding-top: 10px;
+}
+
+.page-main .col-complete {
+    background-color: #74c7e3;
+}
+
+.page-main .col-hat {
+    background-color: #f6c15b;
+}
+
+.page-main strong {
+    padding-top: 10px;
+}
 

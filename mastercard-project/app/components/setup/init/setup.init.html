@@ -1,14 +1,19 @@
 <ion-view side="left" view-title="Settings">
-    <ion-nav-buttons side="right">
-        <button
-                class="button button-balanced ion-checkmark-round"
-                ng-click="proceed()">
-                <!--ng-if="isValid"-->
-        </button>
-    </ion-nav-buttons>
+
+    <ion-header-bar align-title="left" class="bar-assertive">
+        <button class="button button-icon icon ion-navicon"></button>
+
+        <h1 class="title">Settings</h1>
+        <div class="buttons">
+            <button
+                    class="button button-balanced ion-checkmark-round"
+                    ng-click="proceed()">
+            </button>
+        </div>
+    </ion-header-bar>
 
     <ion-content class="page-setup">
-        <div class="header-image text-center">
+        <div class="header-image bar-assertive text-center">
             <img src="images/setup/header-settings.png" height="80"/>
 
             <h2>Setup</h2>
